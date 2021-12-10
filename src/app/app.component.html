@@ -1,0 +1,57 @@
+<h1>Angel's Website</h1>
+
+<br>
+<p>Sign Up (Forms Practice)</p>
+<div id="signUp">
+  <p>SignUp</p>
+  <form id="form" action="action_page.php" method="post">
+    <label for="Email"> Email</label>
+    <input type="email" placeholder="Email" required /> <br />
+    <p class="error" *ngIf="!validEmail">Email is invalid</p>
+    <label for="Password">Password</label>
+    <input type="password" placeholder="Password" /><br />
+    <label for="ConfirmPassword">Confirm Password</label>
+    <input type="password" placeholder="Password" /><br />
+    <p class="error" *ngIf="!validPassword">
+      Password and Confirm Password must match and the Password must be minimum
+      8 characters and it should be alpha numeric, having at least one special
+      character mandatorily.
+    </p>
+    <label for="Gender">Gender</label>
+    <select name="Gender">
+      <option>Male</option>
+      <option>Female</option>
+      <option>Others</option>
+    </select>
+    <br />
+    <input type="checkbox" />
+    <label for="Accept" id="accept" name="accept"> Accept </label> <br />
+    <input type="submit" value="Cancel" />
+    <input
+      type="submit"
+      value="Submit"
+      (click)="validateEmail(); validatePassword(); validateCheckBox()"
+    />
+  </form>
+</div>
+
+<br />
+<p>Counter (Interpolation Practice)</p>
+<p id="count">{{ counter }}</p>
+<p>
+  <button id="button" (click)="incrementCounter()">Fun button</button>
+</p>
+<br />
+
+<p>Pipes Practice (Make UpperCase)</p>
+<form id="f">
+  <label for="String">Input </label>
+  <input type="text" placeholder="String" /><br />
+  <p>UpperCase: {{ text | uppercase }}</p>
+  <p>LowerCase: {{ text | lowercase }}</p>
+  <p>
+    <button id="button" (click)="transformText()">Transform button</button>
+  </p>
+</form>
+<br />
+<app-inner (updateDogName) = "saveData($event)" [dogName]="dogName"> </app-inner>

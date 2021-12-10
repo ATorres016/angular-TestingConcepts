@@ -1,0 +1,11 @@
+#signUp {
+  font-family: Lato;
+  border-style: solid;
+  margin: 5%;
+  padding-bottom: 2%;
+  padding-left: 5%;
+}
+.error{
+  color: red;
+  font-size: x-small;
+}
