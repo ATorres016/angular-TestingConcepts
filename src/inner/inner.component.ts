@@ -15,5 +15,6 @@ export class InnerComponent{
       this.newDogName = document.getElementById('dogForm')[0].value;
       console.log(this.newDogName);
       this.updateDogName.emit(this.newDogName);
+      this.dogChanged = true;
     }
 }

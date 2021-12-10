@@ -1,0 +1,12 @@
+<p> Testing @Input </p>
+<p *ngIf="!dogChanged else elseText"> Default dog name inherited from parent is {{dogName}} </p>
+<ng-template #elseText>
+   <p style = "color: green;   font-size: 10px;"> New dog name is {{dogName}} </p>
+</ng-template>
+<img src = "https://th.bing.com/th/id/R.54bc730782500bd6ed4427f81256f3ea?rik=%2bPFKNmqnkefQIw&riu=http%3a%2f%2fclipartmag.com%2fimages%2fdog-images-cartoon-17.png&ehk=1Ae6X2FnNC%2b2cB6nC1th1rZVlE40xCKl37VNbTCw1mc%3d&risl=&pid=ImgRaw&r=0" width = 60px;>
+<br>
+<form id = "dogForm">
+<p> Testing @Output </p>
+<input type = "text"  placeholder="New dog name">  <br>
+<button (click) = "update()"> Update Dog Name</button>
+</form>
